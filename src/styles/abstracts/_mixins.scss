@@ -1,0 +1,123 @@
+// Function
+
+@function vw($value) {
+    $value: 100 * $value / $rwdS;
+    @return $value + vmin; // 單位可改 vmin 或 vw
+}
+
+@function vmin($value) {
+    $value: 100 * $value / $rwdS;
+    @return $value + vmin;
+}
+
+@function vwM($value) {
+    $value: 100 * $value / $rwdM;
+    @return $value + vw;
+}
+
+@function vwL($value) {
+    $value: 100 * $value / $rwdL;
+    @return $value + vw;
+}
+
+@function vwX($value) {
+    $value: 100 * $value / $rwdX;
+    @return $value + vw;
+}
+
+@function vw2X($value) {
+    $value: 100 * $value / $rwd2X;
+    @return $value + vw;
+}
+
+@function vhX($value) {
+    $value: 100 * $value / (1080 + 80);
+    @return $value + vh;
+}
+
+@function lineHeight($fontSize, $lineHeight) {
+    $value: $lineHeight / $fontSize;
+    @return $value;
+}
+
+@function PsdLetterSpacing($value, $fontSize) {
+    $value: ($value * $fontSize) / 1000;
+    @return $value;
+}
+
+// Mixin
+
+@mixin hover {
+    
+    @media (hover: hover) and (min-width: #{$rwdS + 1}px) {
+        @content;
+    }
+
+}
+
+@mixin tablet {
+
+    @media (max-width: $tablet) {
+        @content;
+    }
+    
+}
+
+@mixin mobile {
+
+    @media (max-width: $mobile) {
+        @content;
+    }
+    
+}
+
+@mixin landscape {
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+        @content;
+    }
+
+}
+
+@mixin hide-text {
+    font-size: 0;
+    text-indent: -5000px;
+}
+
+@mixin moveFadeDefault($props: (transform, opacity), $dur: $secondaryDuration, $delay: 0s, $ease: ease-out, $value: 30%) {
+    will-change: $props;
+    @if $props == (transform, opacity) {
+        transform: translateY($value);
+    } @else if $props == (margin, opacity) {
+        margin-top: $value;
+    }
+    opacity: 0;
+    transition-property: $props;
+    transition-duration: $dur;
+    transition-delay: $delay;
+    transition-timing-function: $ease;
+}
+
+@mixin moveFadeIn($props: transform) {
+    @if $props == transform {
+        transform: translateY(0);
+    } @else if $props == (margin) {
+        margin-top: 0;
+    }
+    opacity: 1;
+}
+
+@mixin scaleDefault {
+    transition: all $primaryDuration ease-out;
+    transition-property: opacity, transform;
+    transform: scale(0) translateZ(0);
+    opacity: 0;
+    backface-visibility: hidden;
+    will-change: transform, opacity
+}
+
+@mixin scaleIn {
+    transform: scale(1);
+    opacity: 1;
+}
+

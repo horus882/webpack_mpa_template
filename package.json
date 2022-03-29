@@ -1,0 +1,58 @@
+{
+  "name": "webpack_mpa_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development APP_ENV=development webpack serve --mode development",
+    "dev": "npm run serve",
+    "stage": "cross-env NODE_ENV=production APP_ENV=stage webpack --mode production",
+    "build": "cross-env NODE_ENV=production APP_ENV=production webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:horus882/webpack_mpa_template.git"
+  },
+  "keywords": [],
+  "author": "Brent Hsieh",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "file-loader": "^6.2.0",
+    "glob": "^7.1.7",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^1.4.0",
+    "node-sass": "^5.0.0",
+    "postcss-loader": "^5.2.0",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.10",
+    "current-device": "^0.10.2",
+    "jquery": "^3.6.0",
+    "overlayscrollbars": "^1.13.1",
+    "particles.js": "^2.0.0",
+    "reset-css": "^5.0.1",
+    "swiper": "^7.2.0"
+  }
+}

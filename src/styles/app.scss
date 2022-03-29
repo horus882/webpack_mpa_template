@@ -1,0 +1,36 @@
+/*----- RESET -----*/
+
+@import '~reset-css';
+
+/*----- ABSTRACTS -----*/
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/utilities';
+
+/*----- BASE -----*/
+
+@import 'base/fonts';
+@import 'base/common';
+
+/*----- VENDORS -----*/
+
+@import 'vendors/overlayscrollbars';
+
+/*----- COMPONENTS -----*/
+
+@import 'components/box';
+@import 'components/btn';
+
+/*----- LAYOUT -----*/
+
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/pop';
+@import 'layout/menu';
+@import 'layout/loading';
+
+/*----- PAGES -----*/
+
+@import 'pages/index';

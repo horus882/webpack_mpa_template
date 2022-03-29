@@ -1,0 +1,45 @@
+block variables
+
+doctype html
+html(lang='zh-Hant-TW')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+
+    // Global site tag (gtag.js) - Google Analytics
+    //- script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-179719845-18')
+    //- script.
+    //-   window.dataLayer = window.dataLayer || [];
+    //-   function gtag(){dataLayer.push(arguments);}
+    //-   gtag('js', new Date());
+    //-   gtag('config', 'UA-179719845-18');
+
+    //- ICON 設定
+    //- link(rel='icon' sizes='16x16' href='')
+    //- link(rel='icon' sizes='32x32' href='')
+    //- link(rel='icon' sizes='48x48' href='')
+    //- link(rel='icon' sizes='64x64' href='')
+    //- link(rel='icon' sizes='128x128' href='')
+    //- link(rel='apple-touch-icon-precomposed' href='')
+    //- link(rel='shortcut icon' type='image/x-icon' href='')
+
+    //- SMO 設定
+    //- meta(property='og:url' content='')
+    //- meta(property='og:image' content='')
+    //- meta(property='og:image:url' content='')
+    meta(property='og:title' content='')
+    meta(property='og:description' content='')
+    meta(property='og:type' content='website')
+    meta(name='keywords' content='')
+    meta(name='description' content='')
+    title Document 
+
+  body
+    #app
+      #container
+        main#main(class=pageId class="inner" data-page=pageName)
+          block pageContent
+    include ../include/loading
+    include ../include/pop
+    block script
