@@ -22,6 +22,15 @@ export class App {
     create = () => {
 		console.log(`Page: ${this.appName.charAt(0).toUpperCase() + this.appName.slice(1)} 已建立`);
         if (typeof this.init === 'function') this.init();
+		window.addEventListener('load', () => {
+			if ($('#loading').is(':visible')) {
+				$('#loading').delay(500).fadeOut(500, () => {
+					if (typeof this.loaded === 'function') this.loaded();
+				})
+			} else {
+				if (typeof this.loaded === 'function') this.loaded();
+			}
+		})
     }
 	init = null;
 	loaded = null;
