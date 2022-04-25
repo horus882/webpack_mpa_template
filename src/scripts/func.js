@@ -51,6 +51,10 @@ const func = {
 
 	},
 
+	getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	},
+
 	setCookie: function(cname, cvalue, exdays) {
 		var d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));

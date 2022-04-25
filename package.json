@@ -53,6 +53,7 @@
     "overlayscrollbars": "^1.13.1",
     "particles.js": "^2.0.0",
     "reset-css": "^5.0.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^7.2.0"
   }
 }
